@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.0pt;
+}
+.header img {
+    margin: 5px;
+    width: 100px;
+}
+
+.header .logo-left {
+    text-align: left;
+    justify-content: left;
+}
+
+.header .logo-right {
+    text-align: right;
+    justify-content: right;
+}
+
+.header td > p {
+    margin: 0;
+}
+
+.header td {
+    text-align: center;
+}
+
+.sub-header {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sub-header p {
+    margin: 0;
+}
+
+.content {
+    text-align: justify;
+}
+
+table td {
+    vertical-align: middle;
+}
+
+.content table td {
+    vertical-align: top;
+}
+
+.text-tiny {
+    font-size: 9pt;
+}
+
+.header .text-big {
+    font-size: 16.0pt !important;
+}
+
+.footer img {
+    width: 100px;
+    margin: 2px;
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.footer {
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.footer table {
+    width: 60%;
+    justify-content: center;
+}
+
+.footer td {
+    text-align: center;
+    justify-content: center;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.content table {
+    margin-left: 40px;
+}
+
+.content .last-bottom-letter {
+    text-indent: 40px;
+}
+
+.table-default{
+    width: 100%;
+}
+
+.table-default td:first-child {
+    width: 25%;
+}
+
+.table-default td:last-child {
+    width: 75%;
+}

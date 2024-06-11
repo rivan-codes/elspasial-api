@@ -1,0 +1,2 @@
+<p class="last-bottom-letter">Tersebut di atas memang benar lahir pada tanggal {{ $applicant['date_birth'] }} dari perkawinan yang sah antara <span style="text-transform:uppercase;">{{ $data['father_name'] }}</span> (suami) dengan <span style="text-transform:uppercase;">{{ $data['mother_name'] }}</span> (istri) yang sama-sama bertempat tinggal di {{ $applicant['address'] }}</p>
+<p class="last-bottom-letter">Demikian surat keterangan ini dibuat dengan sebenarnya untuk dapat dipergunakan sebagaimana mestinya.</p>
