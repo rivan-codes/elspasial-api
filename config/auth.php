@@ -13,10 +13,9 @@ return [
             'driver' => 'jwt',
             'provider' => 'user',
         ],
-
-        'authority' => [
+        'driver' => [
             'driver' => 'jwt',
-            'provider' => 'authority'
+            'provider' => 'driver',
         ]
     ],
 
@@ -26,10 +25,9 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
-        'authority' => [
+        'driver' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Authority::class,
+            'model' => App\Models\Driver::class,
         ]
     ],
 
@@ -40,9 +38,8 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-
-        'authority' => [
-            'provider' => 'authority',
+        'driver' => [
+            'provider' => 'driver',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

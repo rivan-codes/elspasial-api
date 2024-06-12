@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Auth;
+namespace App\Http\Controllers\Driver\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -20,9 +20,9 @@ class LoginController extends Controller
             'password' => $request->input('password'),
         ];
 
-        $token = Auth::guard('user')->attempt($credential);
+        $token = Auth::guard('driver')->attempt($credential);
 
-        return $this->trueResponse('Login User', [
+        return $this->trueResponse('Login Driver', [
             'access_token' => $token,
             'token_type'   => 'bearer',
         ]);

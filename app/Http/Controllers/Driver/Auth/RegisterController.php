@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\User\Auth;
+namespace App\Http\Controllers\Driver\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Driver;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
@@ -19,25 +19,25 @@ class RegisterController extends Controller
             'avatar'        => ['file', 'mimes:jpeg,jpg,png,bmp,HEIC'],
         ]);
 
-        if (User::where('email', $request->email)->first()) {
+        if (Driver::where('email', $request->email)->first()) {
             return $this->falseResponse('Email Already Exist');
         }
-        
-        $user = new User();
+
+        $driver = new Driver();
 
         if ($request->hasFile('avatar')) {
-            $user->avatar = storeFile('user/avatar', $request->file('avatar'), true);
+            $driver->avatar = storeFile('driver/avatar', $request->file('avatar'), true);
         }
 
-        $user->name     = strtoupper( $request->name);
-        $user->email    = $request->email;
-        $user->password = Hash::make($request->password);
+        $driver->name     = strtoupper( $request->name);
+        $driver->email    = $request->email;
+        $driver->password = Hash::make($request->password);
 
-        $user->save();
+        $driver->save();
 
         $data = [
-            'id'    => $user->id,
-            'email' => $request->email,
+            'id'    => $driver->id,
+            'email' => $driver->email,
         ];
 
         return $this->trueResponse('Register', $data);

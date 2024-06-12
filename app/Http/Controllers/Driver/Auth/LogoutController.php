@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Auth;
+namespace App\Http\Controllers\Driver\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -9,9 +9,9 @@ class LogoutController extends Controller
 {
     public function __invoke()
     {
-        $user = Auth::guard('user')->user();
+        $driver = Auth::guard('driver')->user();
 
-        if (!$user) {
+        if (!$driver) {
             return $this->trueResponse('Logout');
         }
 
