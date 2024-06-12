@@ -12,6 +12,7 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
     });
 });
 
-// Route::group(['prefix' => 'home', 'namespace' => 'Home', 'middleware' => 'auth:user'], function () {
-//     Route::get('/', 'IndexController');
-// });
+Route::group(['prefix' => 'trip', 'namespace' => 'Trip', 'middleware' => 'auth:user'], function () {
+    Route::get('list', 'ListController');
+    Route::get('detail', 'DetailController');
+});

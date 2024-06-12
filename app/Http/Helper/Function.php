@@ -43,6 +43,13 @@ if (!function_exists('dbq')) {
     }
 }
 
+if (!function_exists('rupiah_format')) {
+    function rupiah_format($number)
+    {
+        return number_format($number, 0, ',', '.');
+    }
+}
+
 if (!function_exists('metaPagination')) {
     function metaPagination($paginator)
     {

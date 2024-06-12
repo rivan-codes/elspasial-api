@@ -22,6 +22,10 @@ class LoginController extends Controller
 
         $token = Auth::guard('user')->attempt($credential);
 
+        if ($token === false) {
+            return $this->falseResponse(__('auth.failed'));
+        }
+
         return $this->trueResponse('Login User', [
             'access_token' => $token,
             'token_type'   => 'bearer',
