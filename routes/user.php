@@ -16,3 +16,9 @@ Route::group(['prefix' => 'trip', 'namespace' => 'Trip', 'middleware' => 'auth:u
     Route::get('list', 'ListController');
     Route::get('detail', 'DetailController');
 });
+
+Route::group(['prefix' => 'order', 'namespace' => 'Order', 'middleware' => 'auth:user'], function () {
+    Route::post('create', 'CreateController');
+    Route::get('list', 'ListController');
+    Route::get('detail', 'DetailController');
+});

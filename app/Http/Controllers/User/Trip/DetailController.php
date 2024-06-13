@@ -14,6 +14,8 @@ class DetailController extends Controller
     {
         $model = Trip::where('id', $request->id)->first();
 
+        if (!$model) return $this->falseResponse('Data Not Found');
+
         $dataTrip = collect($model->data);
 
         $data = [

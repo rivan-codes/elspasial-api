@@ -13,3 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::group(['prefix' => 'data', 'namespace' => 'Data'], function () {
+    Route::get('order_status', 'OrderStatusController');
+});
