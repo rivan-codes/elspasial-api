@@ -12,6 +12,9 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
     });
 });
 
-// Route::group(['prefix' => 'home', 'namespace' => 'Home', 'middleware' => 'auth:user'], function () {
-//     Route::get('/', 'IndexController');
-// });
+Route::group(['prefix' => 'order', 'namespace' => 'Order', 'middleware' => 'auth:driver'], function () {
+    Route::get('list', 'ListController');
+    Route::get('detail', 'DetailController');
+    Route::post('confirmed', 'ConfirmedController');
+    Route::post('completed', 'CompletedController');
+});
